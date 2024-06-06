@@ -1,0 +1,73 @@
+
+
+SELECT--> select statement is used to select data from a database
+
+    SELECT syntax
+
+    SELECT column1, column2, ... FROM table_name;
+
+    SELECT * FROM table_name;
+
+WHERE --> where statement used to filter records
+    where syntax
+    SELECT column1, column2, ...FROM table_name WHERE condition;
+    The WHERE clause is not only used in SELECT statements, it is also used in UPDATE, DELETE, etc.!
+
+ORDER BY --> sorts the data in ascending order by default
+    To sort the records in descending order, use the DESC keyword.
+    order by syntax
+    SELECT column1, column2, ...FROM table_name ORDER BY column1, column2, ... ASC|DESC;
+
+ALIAS --> used to give table , column a temporary name 
+    ALIAS is created with 'as' word
+    syntax
+    SELECT column_name AS alias_name FROM table_name;
+
+IN Operator
+    The IN operator allows you to specify multiple values in a WHERE clause.
+    The IN operator is a shorthand for multiple OR conditions.
+    syntax
+    SELECT column_name(s) FROM table_name WHERE column_name IN (value1, value2, ...);
+    SELECT column_name(s) FROM table_name WHERE column_name IN (SELECT STATEMENT);
+
+Count --> Aggregate function
+    The COUNT() function returns the number of rows that matches the condition.
+    syntax
+    SELECT COUNT(column_name) FROM table_name WHERE condition;
+
+
+JOIN -->combine rows from two or more tables, based on a related column between them.
+--> The INNER JOIN keyword selects records that have matching values in both tables.
+    syntax
+    SELECT column_name(s)
+    FROM table1
+    INNER JOIN table2
+    ON table1.column_name = table2.column_name;
+-->The LEFT JOIN keyword returns all records from the left table (table1), and the matching records (if any) from the right table (table2).
+    syntax
+    SELECT column_name(s)
+    FROM table1
+    LEFT JOIN table2
+    ON table1.column_name = table2.column_name;
+-->The RIGHT JOIN keyword returns all records from the right table (table2), and the matching records (if any) from the left table (table1).
+    syntax
+    SELECT column_name(s)
+    FROM table1
+    RIGHT JOIN table2
+    ON table1.column_name = table2.column_name;
+
+
+GROUP BY --> groups rows that have the same values into summary rows 
+    The GROUP BY statement is often used with aggregate functions (COUNT(), MAX(), MIN(), SUM(), AVG()) to group the result-set by one or more columns.
+    syntax
+    SELECT column_name(s)
+    FROM table_name
+    WHERE condition
+    GROUP BY column_name(s)
+    ORDER BY column_name(s);
+
+
+
+
+
+
